@@ -1,0 +1,20 @@
+	<bean id="seoulScore" class="ioc.score.service.impl.ScoreServiceImpl">
+		<property name="korService" ref="seoulKorScore" />	
+		<property name="engService" ref="seoulEngScore" />	
+		<property name="matService" ref="seoulMatScore" />	
+	</bean>
+	
+	<bean id="seoulKorScore" class="ioc.score.service.impl.KorScoreServiceImpl">
+		<property name="scoreA" value="98" />
+		<property name="scoreB" value="88" />
+	</bean>
+
+	<bean id="seoulEngScore" class="ioc.score.service.impl.EngScoreServiceImpl">
+		<property name="scoreA" value="90" />
+		<property name="scoreB" value="80" />
+	</bean>
+
+	<bean id="seoulMatScore" class="ioc.score.service.impl.MatScoreServiceImpl">
+		<property name="scoreA" value="70" />
+		<property name="scoreB" value="60" />
+	</bean>
